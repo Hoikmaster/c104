@@ -17,17 +17,17 @@ for i in range(len(file_data)):
 #Calculating Mode
 data = Counter(new_data)
 mode_data_for_range = {
-                        "50-60": 0,
-                        "60-70": 0,
-                        "70-80": 0
+                        "110-125": 0,
+                        "125-140": 0,
+                        "140-180": 0
                     }
-for height, occurence in data.items():
-    if 50 < float(height) < 60:
-        mode_data_for_range["50-60"] += occurence
-    elif 60 < float(height) < 70:
-        mode_data_for_range["60-70"] += occurence
-    elif 70 < float(height) < 80:
-        mode_data_for_range["70-80"] += occurence
+for weight, occurence in data.items():
+    if 50 < float(weight) < 60:
+        mode_data_for_range["110-125"] += occurence
+    elif 60 < float(weight) < 70:
+        mode_data_for_range["125-140"] += occurence
+    elif 70 < float(weight) < 80:
+        mode_data_for_range["140-180"] += occurence
 
 mode_range, mode_occurence = 0, 0
 for range, occurence in mode_data_for_range.items():
